@@ -32,3 +32,19 @@ A classic Snake game built with **HTML**, **CSS**, and **JavaScript**, featuring
 
    ```bash
    git clone https://github.com/yourusername/snake-game.git
+
+2. Open `index.html` in your favorite web browser.
+
+3. Start playing!
+
+## Screenshots
+
+*Include screenshots here if you want to showcase your game UI.*
+
+## Future Improvements
+
+- Add high score tracking with local storage.
+- Implement mobile touch controls.
+- Add more sound effects and music options.
+- Include difficulty levels.
+
