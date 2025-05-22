@@ -41,9 +41,9 @@ A classic Snake game built with **HTML**, **CSS**, and **JavaScript**, featuring
 
 Here are some screenshots of the game:
 
-![Snake Game Screenshot 1](snakegame1.png)
+![Snake Game Screenshot 1](snakegame2.png)
 
-![Snake Game Screenshot 2](snakegame2.png)
+![Snake Game Screenshot 2](snakegame1.png)
 
 ![Snake Game Screenshot 3](snakegame3.png)
 
