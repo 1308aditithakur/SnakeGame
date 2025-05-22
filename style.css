@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: whitesmoke;
+    --container-bg: white;
+    --text-color: black;
+    --snake-color: red;
+    --food-color: green;
+}
+
+body.dark {
+    --bg-color: #1e1e1e;
+    --container-bg: #2e2e2e;
+    --text-color: white;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 650px;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+.game-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.score-container {
+    height: 4rem;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    border-radius: 8px;
+}
+
+.score-container .score-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+#toggle-sound,
+#toggle-theme {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+}
+
+#toggle-sound:hover,
+#toggle-theme:hover,
+#toggle-sound:focus,
+#toggle-theme:focus {
+    transform: scale(1.2);
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    background-color: var(--container-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.game-container {
+    width: 90vw;
+    max-width: 27rem;
+    height: 80vw;
+    max-height: 24rem;
+    display: grid;
+    grid-template: repeat(25, 1fr) / repeat(25, 1fr);
+    margin-top: 0.5rem;
+    background-color: var(--container-bg); 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.snake {
+    background-color: var(--snake-color);
+}
+
+.food {
+    background-color: var(--food-color);
+    border-radius: 50%;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: red;
+    background-color: black;
+    padding: 20px 40px;
+    border: 3px solid red;
+    text-align: center;
+    display: none;
+    z-index: 10;
+    white-space: nowrap;
+    animation: blink 1s step-end infinite;
+    font-family: 'Courier New', monospace;
+}
+
+#restart-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: monospace;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    margin-top: 1.5rem;
+}
+
+#restart-btn:hover,
+#restart-btn:focus {
+    background-color: red;
+    outline: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
